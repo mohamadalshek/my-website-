@@ -1,0 +1,146 @@
+/* Navigation Pills Styling (Active and Hover states) */
+.nav-pills .nav-link.active {
+    background-color: #002147 !important;
+    color: white !important;
+    border: none !important;
+}
+
+.nav-pills .nav-link:not(.active):hover {
+    background-color: #e9ecef;
+}
+
+
+/* Slider Main Container Setup */
+.slider-container {
+    width: 100%;
+    max-width: 900px;
+    margin: 20px auto;
+    position: relative;
+    direction: rtl;
+}
+/* Custom Slider Frame with shadow and rounded corners */
+.custom-slider {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Individual Slide visibility and fade animation */
+.slide {
+    display: none;
+    width: 100%;
+    height: 100%;
+    animation: fadeEffect 1s;
+}
+
+.slide.active {
+    display: block;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Text Overlay (Caption) on top of the images */
+.slide-caption {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    background: linear-gradient(transparent, #1a4a7c);
+    color: white;
+    padding: 30px 20px;
+    text-align: right;
+}
+
+/* Navigation Buttons (Next & Previous) */
+.prev,
+.next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(255, 255, 255, 0.8);
+    border: none;
+    padding: 15px;
+    cursor: pointer;
+    border-radius: 50%;
+    font-size: 20px;
+    color: #1a4a7c;
+    z-index: 10;
+}
+
+.next {
+    right: 15px;
+}
+
+.prev {
+    left: 15px;
+}
+
+/* Navigation Dots below the slider */
+.dots-container {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.dot {
+    height: 12px;
+    width: 12px;
+    margin: 0 5px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.dot.active {
+    background-color: #1a4a7c;
+}
+/* Smooth Fade Keyframes */
+@keyframes fadeEffect {
+    from {
+        opacity: 0.4;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Date and Location Information Styling */
+.slide-info {
+    font-size: 0.9rem;
+    color: #e0e0e0;
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.slide-info i {
+    color: #0dcaf0; 
+    margin-left: 5px;
+}
+
+/* Enhanced Caption Background with Darker Gradient */
+.slide-caption {
+    background: linear-gradient(transparent, rgba(0, 51, 102, 0.95));
+    padding: 40px 30px 20px 30px !important;
+}
+
+.slide-caption h5 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+/* Button Hover Effect inside the slide */
+.slide-caption .btn:hover {
+    background-color: #0dcaf0;
+    color: white;
+    border-color: #0dcaf0;
+}
